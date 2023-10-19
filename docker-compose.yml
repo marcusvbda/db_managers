@@ -1,0 +1,18 @@
+version: "3"
+services:
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: root@email.com
+      PGADMIN_DEFAULT_PASSWORD: roottoor
+    ports:
+      - "8888:80"
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    environment:
+      PMA_HOST: mysql_db
+    ports:
+      - "9999:80"
